@@ -25,9 +25,23 @@ e.g. cloud-run-sa@project-id.iam.gserviceaccount.com
 #### Roles
 
 Existing roles:
-- Cloud Build Service Account
+- Cloud Run Invoker
 
 Cloud Run SA Core Permissions (custom role created at the org level with permissions):
+- resourcemanager.projects.get
+- resourcemanager.projects.list
+- secretmanager.versions.access
+
+### Cloud Build default service account
+
+e.g. project-number@cloudbuild.gserviceaccount.com
+
+#### Roles
+
+Existing roles:
+- Cloud Build Service Account
+
+Cloud Build SA Core Permissions (custom role created at the org level with permissions):
 - iam.serviceAccounts.actAs
 - iam.serviceAccounts.get
 - iam.serviceAccounts.list
@@ -57,18 +71,4 @@ Cloud Run SA Core Permissions (custom role created at the org level with permiss
 - run.services.listTagBindings
 - run.services.setIamPolicy
 - run.services.update
-- secretmanager.versions.access
-
-### Cloud Build default service account
-
-e.g. project-number@cloudbuild.gserviceaccount.com
-
-#### Roles
-
-Existing roles:
-- Cloud Run Invoker
-
-Cloud Build SA Core Permissions (custom role created at the org level with permissions):
-- resourcemanager.projects.get
-- resourcemanager.projects.list
 - secretmanager.versions.access
